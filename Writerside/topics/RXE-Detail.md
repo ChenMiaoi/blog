@@ -289,8 +289,8 @@ ret = default_cb_array[ nlh->nlmsg_type ]( nlh, data );
 
 **经过实际调试，在初始化时，如果请求被正确响应，则返回的报文类型应该是`NLMSG_DONE`，由于我们内部实现了`mnl_cb_t`，因此会执行`mnlu_cb_stop`**：
 
-<code-block lang="C++">
+``` c++
 if ( mnl_nlmsg_get_payload_len( nlh ) < sizeof( len ) )
     return MNL_CB_STOP;
 len = *(int*) mnl_nlmsg_get_payload( nlh );
-</code-block>
+```

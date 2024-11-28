@@ -6,6 +6,7 @@
                  name="RDMA"
                  start-page="overview.md">
 
+    <toc-element topic="FAKE-RDMA.md"/>
     <toc-element topic="RXE-Detail.md"/>
     <toc-element topic="overview.md"/>
 </instance-profile>
